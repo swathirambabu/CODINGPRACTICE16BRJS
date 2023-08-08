@@ -2,7 +2,7 @@
 import './index.css'
 
 const AppointmentItem = props => {
-  const {appointmentDetails, isToggleLike} = props
+  const {appointmentDetails, toggleIsLike} = props
   const {id, name, date, isStarred} = appointmentDetails
 
   const starImgUrl = isStarred
@@ -10,7 +10,7 @@ const AppointmentItem = props => {
     : 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
 
   const onClickStar = () => {
-    isToggleLike(id)
+    toggleIsLike(id)
   }
 
   return (
